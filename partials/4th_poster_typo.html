@@ -1,0 +1,43 @@
+<!-- Navbar -->
+<div id="top_nav" ng-init="act=1">
+    <img src="name_logo.svg" id="name_logo"/>
+    <div class="nav_options" id="lappy_display">
+      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}">Home</a>
+      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}">Projects</a>
+      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}">Contact</a>
+    </div>
+</div>
+<!--phone nav bar-->
+<div ng-click="toggle_icon()" id="nav_icon">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
+  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}">Home</a>
+  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}">Projects</a>
+  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
+</div>
+
+
+<!-- Navbar -->
+<div id="top_nav" ng-init="act=1">
+    <img src="name_logo.svg" id="name_logo"/>
+    <div class="nav_options" id="lappy_display">
+      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}">Home</a>
+      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}">Projects</a>
+      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}">Contact</a>
+    </div>
+</div>
+<!--phone nav bar-->
+<div ng-click="toggle_icon()" id="nav_icon">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
+  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}">Home</a>
+  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}">Projects</a>
+  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
+</div>
+

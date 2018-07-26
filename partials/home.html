@@ -1,0 +1,148 @@
+<!-- Navbar -->
+<div id="top_nav" ng-init="act=1">
+    <img src="name_logo.svg" id="name_logo"/>
+    <div class="nav_options" id="lappy_display">
+      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}">Home</a>
+      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}">Projects</a>
+      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}">Contact</a>
+    </div>
+</div>
+<!--phone nav bar-->
+<div ng-click="toggle_icon()" id="nav_icon">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
+  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}">Home</a>
+  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}">Projects</a>
+  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
+</div>
+
+
+<!-- HOME-->
+<div id="home"  ng-class="{'less_opacity':less_opacity}" ng-init="less_opacity=false">
+  <div class="heading">Hi!</div>
+  <div class="desc">I am <p id="name" class="bold">Soham Khadtare</p></div>
+  <div class="desc">
+    And I am <p class="bold">Graphic Designer</p> based in <p class="bold">Mumbai</p>
+  </div>
+  <img id="gateway" src="gatewayofindia.svg">
+</div>
+<!--Projects-->
+<div id="projects"  ng-class="{'less_opacity':less_opacity}">
+  <div class="heading" style="display:inline-block;">Projects</div>
+  <div id="projects_nav">
+      <div class="nav-item">Illustrations</div>
+      <div class="nav-item">Graphic Design</div>
+      <div class="nav-item">UI/UX</div>
+      <div class="nav-item">Motion Graphics</div>
+  </div>
+  <div class="pjts" id="lappy_display">
+    <div id="pjt_1">
+      <div class="nmbr bold">01</div>
+      <div class="line">
+        <div class="line_comp1"></div>
+        <div class="line_comp2"></div>
+      </div>
+      <div class="pjt_content">
+        <div class="pjt_heading">36 Days of Type</div>
+        <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. </div>
+        <a href="#!/36_days_of_type" class="pjt_desp">View More</a>
+      </div>
+      <img src="A-01.png" class="pjt_img">
+    </div>
+    <div id="pjt_2">
+      <img src="Poster_1.JPG" class="pjt_img">
+      <div class="pjt_content">
+        <div class="pjt_heading">4th Poster Typo Contest</div>
+        <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. Ei unum pericula pri. Et quo ferri clita voluptatum, sit falli possim causae ut. Quem aperiam no has, natum epicuri quo ei, cibo mutat elaboraret vix ad.</div>
+        <a href="#!/4th_poster_typo" class="pjt_desp">View More</a>
+      </div>
+      <div class="line">
+        <div class="line_comp1"></div>
+        <div class="line_comp2"></div>
+      </div>
+      <div class="nmbr bold">02</div>
+    </div>
+    <div id="pjt_3">
+      <div class="nmbr bold">03</div>
+      <div class="line">
+        <div class="line_comp1"></div>
+        <div class="line_comp2"></div>
+      </div>
+      <div class="pjt_content">
+        <div class="pjt_heading">Culturals Website</div>
+        <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. Ei unum pericula pri. Et quo ferri clita voluptatum, sit falli possim causae ut. Quem aperiam no has, natum epicuri quo ei, cibo mutat elaboraret vix ad.</div>
+      </div>
+      <img src="Webpage_(Laptop)Login.png" class="pjt_img">
+    </div>
+  </div>
+  <!--Phone display Projects-->
+  <div class="pjts" id="phone_display">
+
+    <div id="pjt_1">
+      <img src="A-01.png" class="pjt_img">
+      <div class="pjt_content">
+        <div class="nmbr bold">01</div>
+        <div class="line">
+          <div class="line_comp1"></div>
+          <div class="line_comp2"></div>
+        </div>
+        <div class="pjt_heading">36 Days of Type</div>
+      </div>
+      <div class="pjt_desp">Lorem ipsum dolor sit amet, causae </div>
+    </div>
+
+    <div id="pjt_2">
+      <img src="Poster_1.JPG" class="pjt_img">
+      <div class="pjt_content">
+        <div class="nmbr bold">02</div>
+        <div class="line">
+          <div class="line_comp1"></div>
+          <div class="line_comp2"></div>
+        </div>
+        <div class="pjt_heading">4th Poster Typo Contest</div>
+      </div>
+      <div class="pjt_desp">Lorem ipsum dolor sit amet, causae s</div>
+    </div>
+
+    <div id="pjt_3">
+      <img src="Webpage_(Laptop)Login.png" class="pjt_img">
+      <div class="pjt_content">
+        <div class="nmbr bold">03</div>
+        <div class="line">
+          <div class="line_comp1"></div>
+          <div class="line_comp2"></div>
+        </div>
+        <div class="pjt_heading">Culturals Website</div>
+      </div>
+      <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te.</div>
+    </div>
+
+  </div>
+</div>
+
+<div ng-class="{'behance':true,'less_opacity':less_opacity}">View full potfolio on <a href="https://www.behance.net/sohamkhadatare" target="_blank" style="color:white" class="bold">Behance</a></div>
+<!--Contact-->
+<div id="contact"  ng-class="{'less_opacity':less_opacity}">
+  <img src="face.png" id="face">
+  <div class="contact_txt">
+    <div class="heading">About Me</div>
+    <div>
+      <div class="contact_desp"></div>
+      <div id="resume">
+        <div>View my Resume</div>
+      </div>
+    </div>
+    <div id="get_in_touch">
+      <div class="bold">Get in touch</div>
+      <img src="icons/phone.png" ng-click="copy_number()" class="icon" onmouseover="this.setAttribute('src', 'icons/act_phone.png')"onmouseout="this.setAttribute('src', 'icons/phone.png')"/>
+      <img src="icons/mail.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_mail.png')"onmouseout="this.setAttribute('src', 'icons/mail.png')"/>
+      <img src="icons/fb.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_fb.png')"onmouseout="this.setAttribute('src', 'icons/fb.png')"/>
+      <img src="icons/insta.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_insta.png')"onmouseout="this.setAttribute('src', 'icons/insta.png')"/>
+      <img src="icons/ball.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_ball.png')"onmouseout="this.setAttribute('src', 'icons/ball.png')"/>
+    </div>
+    <div>
+  </div>
+</div>

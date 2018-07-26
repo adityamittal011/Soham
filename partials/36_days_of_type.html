@@ -1,0 +1,44 @@
+<!-- Navbar -->
+<div id="top_nav" ng-init="act=1">
+    <img src="name_logo.svg" id="name_logo"/>
+    <div class="nav_options" id="lappy_display">
+      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}">Home</a>
+      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}">Projects</a>
+      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}">Contact</a>
+    </div>
+</div>
+<!--phone nav bar-->
+<div ng-click="toggle_icon()" id="nav_icon">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
+  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}">Home</a>
+  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}">Projects</a>
+  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
+</div>
+
+
+<!--Contact-->
+<div id="contact"  ng-class="{'less_opacity':less_opacity}">
+  <img src="face.png" id="face">
+  <div class="contact_txt">
+    <div class="heading">About Me</div>
+    <div>
+      <div class="contact_desp"></div>
+      <div id="resume">
+        <div>View my Resume</div>
+      </div>
+    </div>
+    <div id="get_in_touch">
+      <div class="bold">Get in touch</div>
+      <img src="icons/phone.png" ng-click="copy_number()" class="icon" onmouseover="this.setAttribute('src', 'icons/act_phone.png')"onmouseout="this.setAttribute('src', 'icons/phone.png')"/>
+      <img src="icons/mail.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_mail.png')"onmouseout="this.setAttribute('src', 'icons/mail.png')"/>
+      <img src="icons/fb.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_fb.png')"onmouseout="this.setAttribute('src', 'icons/fb.png')"/>
+      <img src="icons/insta.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_insta.png')"onmouseout="this.setAttribute('src', 'icons/insta.png')"/>
+      <img src="icons/ball.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_ball.png')"onmouseout="this.setAttribute('src', 'icons/ball.png')"/>
+    </div>
+    <div>
+  </div>
+</div>
