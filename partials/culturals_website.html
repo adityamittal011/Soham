@@ -19,14 +19,72 @@
   <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
 </div>
 
+<!-- Navbar -->
+<div id="top_nav" ng-init="act=1">
+    <img src="name_logo.svg" id="name_logo"/>
+    <div class="nav_options" id="lappy_display">
+      <a ng-click="switch_page('/')" ng-class="{'active_top_nav':act==1}"><u>Home</u></a>
+      <a ng-click="switch_page_hash('/','projects')" ng-class="{'active_top_nav':act==2}"><u>Projects</u></a>
+      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}"><u>Contact</u></a>
+    </div>
+</div>
+<!--phone nav bar-->
+<div ng-click="toggle_icon()" id="nav_icon">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
+  <a ng-click="switch_page('/')" ng-class="{'active_top_nav':act==1}"><u>Home</u></a>
+  <a ng-click="switch_page_hash('/','projects')"><u>Projects</u></a>
+  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}"><u>Contact</u></a>
+</div>
 
+
+
+<!--Main Content-->
+<div class="main_content">
+  <div id="culturals_website"><img src="icons/back.png" ng-click="switch_page_hash('/','pjt_4')" class="back"/>  Culturals Website</div>
+  <div class="culturals_website_content">
+    <div class="italic" style="display:block">Illustration</div>
+    <img src="images/Culturals.png" class="main_img"/>
+  </div>
+  <div class="culturals_website_content">
+    Culturals is a student body of IIT Bombay that caters to the students interested in pursuing a hobby which is not related to the academic curiculum like design, dance, dramatics, fine arts, photography, film-making,etc. The essence of the work dont by the body can be summarized by their slogan - “To Life. To Surprises. To Discovery”
+  </div>
+  <div class="culturals_website_content">
+    The Brief
+  </div>
+  <div class="culturals_website_content">
+    The original Culturals Webpage did not get enough activity due to probelms with poor UI and UX of the site. It was important to increase activity as the page has many microsites and portals which help in managing services.
+  </div>
+  <div class="culturals_website_content">
+    The Approach
+  </div>
+  <div class="culturals_website_content">
+    The solution involved revamping the Ui and UX to reduce the number of screens and to reduce the navigational effort through the contents of the website.
+  </div>
+  <div class="culturals_website_content">
+    The Colors
+  </div>
+  <img src="images/culturals_website/website_colors.png" class="culturals_website_colors_img"/>
+  <div class="culturals_website_content">
+    The Typefaces
+  </div>
+  <img src="images/culturals_website/website_fonts.png" class="culturals_website_type_img"/>
+  <img src="images/culturals_website/flow.png" class="website_flow"/>
+</div>
+
+
+<!--Behance-->
+<a href="https://www.behance.net/sohamkhadatare" target="_blank"><div ng-class="{'behance':true,'less_opacity':less_opacity}">View full potfolio on <p style="color:white" class="bold">Behance</p></div></a>
 <!--Contact-->
 <div id="contact"  ng-class="{'less_opacity':less_opacity}">
   <img src="face.png" id="face">
   <div class="contact_txt">
     <div class="heading">About Me</div>
     <div>
-      <div class="contact_desp"></div>
+      <div class="contact_desp">I am  an undergraduate student of IIT Bombay, my Major is in Civil Engineering and my minor is in Design.</div>
       <div id="resume">
         <div>View my Resume</div>
       </div>

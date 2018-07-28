@@ -1,14 +1,14 @@
 @font-face {
     font-family: HKGrotesk;
-    src: url(HKGrotesk-Regular.otf);
+    src: url(fonts/HKGrotesk-Regular.otf);
 }
 @font-face {
     font-family: HKGrotesk_Bold;
-    src: url(HKGrotesk-SemiBold.otf);
+    src: url(fonts/HKGrotesk-SemiBold.otf);
 }
 @font-face {
     font-family: HKGrotesk_italic;
-    src: url(HKGrotesk-LightItalic.otf);
+    src: url(fonts/HKGrotesk-LightItalic.otf);
 }
 html {
 	-ms-text-size-adjust: 100%;
@@ -21,12 +21,20 @@ body {
 	font-size: 1.3vw;
 	opacity: 1;
 }
+u{
+	text-decoration: none;
+}
 #phone_display{
 	display: none;
 }
 .bold{
 	display: inline;
 	font-family: "HKGrotesk_Bold", sans-serif;
+}
+.italic{
+	display: inline;
+	font-family: HKGrotesk_italic;
+	font-size: 1vw; 
 }
 a{
 	text-decoration: none;
@@ -36,7 +44,7 @@ a{
 /*Web Page
 /*****************************************/
 .heading{
-	font-size: 5vw;
+	font-size: 5.2vw;
 	padding-top: 3vh;
 	padding-bottom: 3vh;
 	padding-left: 3vw;
@@ -50,7 +58,7 @@ a{
 	height: 100vh;
 }
 #name{
-	font-size: 2vw;
+	font-size: 1.7vw;
 }
 #gateway{
 	height: 50vh;
@@ -86,8 +94,9 @@ a{
 	float: left;
 	display: inline-block;
 }
-.active_top_nav{
-	text-decoration: underline;
+.active_top_nav u{
+	text-decoration: none;
+	border-bottom: 2px solid black;
 }
 /*****************************************/
 /*Projects*/
@@ -109,7 +118,7 @@ a{
 }
 /*Projects*/
 .nmbr{
-	font-size: 5vw;
+	font-size: 6.7vw;
 	color: #F3F3F3;
 	display: table-cell;
 	vertical-align: middle;
@@ -145,11 +154,11 @@ a{
 	display: table-cell;
 	vertical-align: middle;
 }
-#pjt_1, #pjt_2, #pjt_3{
+#pjt_1, #pjt_2, #pjt_3, #pjt_4{
 	display: table;
 }
 .pjt_heading{
-	font-size: 2vw;
+	font-size: 2.6vw;
 	font-family: HKGrotesk_Bold;
 }
 
@@ -157,7 +166,7 @@ a{
 #pjt_1 .pjt_content,#pjt_3 .pjt_content{
 	text-align: right;
 }
-#pjt_2 .pjt_content{
+#pjt_2 .pjt_content, #pjt_4 .pjt_content{
 	text-align: left;
 }
 
@@ -165,9 +174,12 @@ a{
 	color: #8083BF;
 }
 #pjt_2 .pjt_heading{
-	color: #F3C0C7;
+	color: #F5A71C;
 }
 #pjt_3 .pjt_heading{
+	color: #F3C0C7;
+}
+#pjt_4 .pjt_heading{
 	color: #E83C68;
 }
 
@@ -225,13 +237,16 @@ Responsive Website
 *****************************************************************/
 @media all and (max-width: 750px){
 	body{
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 	#phone_display{
 		display: block;
 	}
 	#lappy_display{
 		display: none;
+	}
+	.italic{
+		font-size: 1.5vw; 
 	}
 	/*****************************************/
 	/*Home*/
@@ -240,7 +255,7 @@ Responsive Website
 		font-size: 8vw;
 	}
 	#name{
-		font-size: 4vw;
+		font-size: 2.7vw;
 	}
 	#gateway{
 		width: 96vw;
@@ -265,11 +280,6 @@ Responsive Website
 		display: inline-block;
 		opacity: 1;
 		padding-left: 2vw;
-	}
-	.active_top_nav{
-		text-decoration: none;
-		background-color: red;
-		opacity: 0.7;
 	}
 	/*hamburger menu icon*/
 	#nav_icon{
@@ -311,7 +321,7 @@ Responsive Website
 	/*Nav Bar icon animation*/
 	.bar1, .bar2, .bar3 {
 	    width: 35px;
-	    height: 5px;
+	    height: 4px;
 	    background-color: #333;
 	    margin: 6px 0;
 	    transition: 0.4s;
@@ -337,7 +347,7 @@ Responsive Website
 	}
 	/*Projects*/
 	
-	#pjt_1, #pjt_2, #pjt_3{
+	#pjt_1, #pjt_2, #pjt_3,#pjt_4{
 		display: block;
 		text-align: center;
 		padding-bottom: 12vh;
@@ -361,7 +371,7 @@ Responsive Website
 	}
 	
 	.nmbr{
-		font-size: 10vw;
+		font-size: 10.2vw;
 		padding-top: 0vw;
 		padding-right: 1vw;
 		padding-left: 0vw;
@@ -388,13 +398,13 @@ Responsive Website
 		height: 2vw;
 	}
 	.pjt_heading{
-		font-size: 4.5vw;
+		font-size: 4vw;
 		padding-left: 2vw;
 		display: table-cell;
 		vertical-align: middle;
 	}
 
-	#pjt_1 .pjt_content,#pjt_3 .pjt_content, #pjt_2 .pjt_content{
+	#pjt_1 .pjt_content,#pjt_3 .pjt_content, #pjt_2 .pjt_content,#pjt_4 .pjt_content{
 		text-align: center;
 	}
 

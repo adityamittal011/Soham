@@ -2,9 +2,9 @@
 <div id="top_nav" ng-init="act=1">
     <img src="name_logo.svg" id="name_logo"/>
     <div class="nav_options" id="lappy_display">
-      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}">Home</a>
-      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}">Projects</a>
-      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}">Contact</a>
+      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}"><u>Home</u></a>
+      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}"><u>Projects</u></a>
+      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}"><u>Contact</u></a>
     </div>
 </div>
 <!--phone nav bar-->
@@ -14,17 +14,17 @@
   <div class="bar3"></div>
 </div>
 <div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
-  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}">Home</a>
-  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}">Projects</a>
-  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
+  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}"><u>Home</u></a>
+  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}"><u>Projects</u></a>
+  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}"><u>Contact</u></a>
 </div>
 
 
 <!-- HOME-->
 <div id="home"  ng-class="{'less_opacity':less_opacity}" ng-init="less_opacity=false">
   <div class="heading">Hi!</div>
-  <div class="desc">I am <p id="name" class="bold">Soham Khadtare</p></div>
-  <div class="desc">
+  <div class="desc" id="name">I am <p class="bold">Soham Khadtare</p></div>
+  <div class="desc" id="name">
     And I am <p class="bold">Graphic Designer</p> based in <p class="bold">Mumbai</p>
   </div>
   <img id="gateway" src="gatewayofindia.svg">
@@ -47,17 +47,18 @@
       </div>
       <div class="pjt_content">
         <div class="pjt_heading">36 Days of Type</div>
-        <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. </div>
-        <a href="#!/36_days_of_type" class="pjt_desp">View More</a>
+        <div class="pjt_desp">Illstrations for every Alphabet and Number made daily for 36 days</div>
+        <div ng-click="switch_page('/36_days_of_type')" class="pjt_desp italic" style="cursor:pointer">View More</div>
       </div>
-      <img src="A-01.png" class="pjt_img">
+      <img src="images/A-01.png" class="pjt_img">
     </div>
+
     <div id="pjt_2">
-      <img src="Poster_1.JPG" class="pjt_img">
+      <img src="images/Token.png" class="pjt_img">
       <div class="pjt_content">
-        <div class="pjt_heading">4th Poster Typo Contest</div>
-        <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. Ei unum pericula pri. Et quo ferri clita voluptatum, sit falli possim causae ut. Quem aperiam no has, natum epicuri quo ei, cibo mutat elaboraret vix ad.</div>
-        <a href="#!/4th_poster_typo" class="pjt_desp">View More</a>
+        <div class="pjt_heading">Token, The Toucan</div>
+        <div class="pjt_desp">Mascot Design for Inter IIT Cultural Meet 2017-18</div>
+        <div ng-click="switch_page('/token')" class="pjt_desp italic" style="cursor:pointer">View More</div>
       </div>
       <div class="line">
         <div class="line_comp1"></div>
@@ -65,6 +66,7 @@
       </div>
       <div class="nmbr bold">02</div>
     </div>
+
     <div id="pjt_3">
       <div class="nmbr bold">03</div>
       <div class="line">
@@ -72,17 +74,32 @@
         <div class="line_comp2"></div>
       </div>
       <div class="pjt_content">
-        <div class="pjt_heading">Culturals Website</div>
-        <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. Ei unum pericula pri. Et quo ferri clita voluptatum, sit falli possim causae ut. Quem aperiam no has, natum epicuri quo ei, cibo mutat elaboraret vix ad.</div>
+        <div class="pjt_heading">4th Poster Typo Contest</div>
+        <div class="pjt_desp">Submission for the 4th Poster Typography Contest conducted by Museum of Typography, Greece</div>
+        <div ng-click="switch_page('/4th_poster_typo')" class="pjt_desp italic" style="cursor:pointer">View More</div>
       </div>
-      <img src="Webpage_(Laptop)Login.png" class="pjt_img">
+      <img src="images/Poster.png" class="pjt_img">
+    </div>
+
+    <div id="pjt_4">
+      <img src="images/Culturals.png" class="pjt_img">
+      <div class="pjt_content">
+        <div class="pjt_heading">Culturals Website</div>
+        <div class="pjt_desp">Revamp of the Culturals Website, a portal for cultural activites</div>
+        <div ng-click="switch_page('/culturals_website')" class="pjt_desp italic" style="cursor:pointer">View More</div>
+      </div>
+      <div class="line">
+        <div class="line_comp1"></div>
+        <div class="line_comp2"></div>
+      </div>
+      <div class="nmbr bold">04</div>
     </div>
   </div>
   <!--Phone display Projects-->
   <div class="pjts" id="phone_display">
 
     <div id="pjt_1">
-      <img src="A-01.png" class="pjt_img">
+      <img src="images/A-01.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">01</div>
         <div class="line">
@@ -91,46 +108,59 @@
         </div>
         <div class="pjt_heading">36 Days of Type</div>
       </div>
-      <div class="pjt_desp">Lorem ipsum dolor sit amet, causae </div>
+      <div class="pjt_desp">Illstrations for every Alphabet and Number made daily for 36 days</div>
     </div>
 
     <div id="pjt_2">
-      <img src="Poster_1.JPG" class="pjt_img">
+      <img src="images/Token.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">02</div>
         <div class="line">
           <div class="line_comp1"></div>
           <div class="line_comp2"></div>
         </div>
-        <div class="pjt_heading">4th Poster Typo Contest</div>
+        <div class="pjt_heading">Token, The Toucan</div>
       </div>
-      <div class="pjt_desp">Lorem ipsum dolor sit amet, causae s</div>
+      <div class="pjt_desp">Mascot Design for Inter IIT Cultural Meet 2017-18</div>
     </div>
 
     <div id="pjt_3">
-      <img src="Webpage_(Laptop)Login.png" class="pjt_img">
+      <img src="images/Poster.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">03</div>
         <div class="line">
           <div class="line_comp1"></div>
           <div class="line_comp2"></div>
         </div>
+        <div class="pjt_heading">4th Poster Typo Contest</div>
+      </div>
+      <div class="pjt_desp">Submission for the 4th Poster Typography Contest conducted by Museum of Typography, Greece</div>
+    </div>
+
+    <div id="pjt_4">
+      <img src="images/Culturals.png" class="pjt_img">
+      <div class="pjt_content">
+        <div class="nmbr bold">04</div>
+        <div class="line">
+          <div class="line_comp1"></div>
+          <div class="line_comp2"></div>
+        </div>
         <div class="pjt_heading">Culturals Website</div>
       </div>
-      <div class="pjt_desp">Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te.</div>
+      <div class="pjt_desp">Revamp of the Culturals Website, a portal for cultural activites</div>
     </div>
 
   </div>
 </div>
 
-<div ng-class="{'behance':true,'less_opacity':less_opacity}">View full potfolio on <a href="https://www.behance.net/sohamkhadatare" target="_blank" style="color:white" class="bold">Behance</a></div>
+<a href="https://www.behance.net/sohamkhadatare" target="_blank"><div ng-class="{'behance':true,'less_opacity':less_opacity}">View full potfolio on <p style="color:white" class="bold">Behance</p></div></a>
 <!--Contact-->
 <div id="contact"  ng-class="{'less_opacity':less_opacity}">
   <img src="face.png" id="face">
   <div class="contact_txt">
     <div class="heading">About Me</div>
     <div>
-      <div class="contact_desp"></div>
+      <div class="contact_desp">I am  an undergraduate student of IIT Bombay, my Major is in Civil Engineering and my minor is in Design.</div>
       <div id="resume">
         <div>View my Resume</div>
       </div>

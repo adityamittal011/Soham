@@ -1,30 +1,35 @@
 var app = angular.module('soham', ['ngRoute']);
 
-app.config(['$routeProvider', function($routeProvider){
+app.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'partials/home.html',
             controller: 'HomeCtrl'
         })
         .when('/36_days_of_type', {
-            templateUrl: 'partials/36_days_of_type.html'
+            templateUrl: 'partials/36_days_of_type.html',
+            controller: 'HomeCtrl'
         })
         .when('/culturals_website', {
-            templateUrl: 'partials/culturals_website.html'
+            templateUrl: 'partials/culturals_website.html',
+            controller: 'HomeCtrl'
         })
         .when('/token', {
-            templateUrl: 'partials/token.html'
+            templateUrl: 'partials/token.html',
+            controller: 'HomeCtrl'
         })
         .when('/4th_poster_typo', {
-            templateUrl: 'partials/4th_poster_typo.html'
+            templateUrl: 'partials/4th_poster_typo.html',
+            controller: 'HomeCtrl'
         })
         .otherwise({
             redirectTo: '/'
         });
+    $locationProvider.hashPrefix('!');
 }]);
 
-app.controller('HomeCtrl', ['$scope', '$window', 
-    function($scope,$window){
+app.controller('HomeCtrl', ['$scope', '$window', '$location',
+    function($scope,$window,$location){
     
     /* active tab
     ----------------------------*/
@@ -124,4 +129,16 @@ app.controller('HomeCtrl', ['$scope', '$window',
             document.body.removeChild(el);
             alert("Phone Number copied to clipboard!")
         }
+        $scope.switch_page = function(path){
+            $window.scrollTo(0, 0);
+            $location.path(path);
+            $location.hash('');
+        }
+        $scope.switch_page_hash = function(path,hash){
+            $window.scrollTo(0, 0);
+            $location.path(path);
+            $location.hash(hash);
+        }
     }]);
+
+
