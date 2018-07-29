@@ -161,8 +161,8 @@ a{
 	padding-left: 2vw;
 }
 .pjt_img{
-	width: 35vw;
-	height: 35vw;
+	width: 25vw;
+	height: 25vw;
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -195,6 +195,12 @@ a{
 	color: #E83C68;
 }
 
+#pjt_3 .line{
+	width: 10vw;
+}
+#pjt_3 .pjt_content{
+	width: 30vw;
+}
 /*****************************************/
 /*Behance Link*/
 /*****************************************/

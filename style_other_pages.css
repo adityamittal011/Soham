@@ -19,14 +19,22 @@
 	font-family: HKGrotesk_Bold;
 	color: #8083BF;
 }
-.days_36_images{
+.days_36_image1{
 	width: 100%;
+	padding-top: 5.5vh;
+	padding-bottom:5.5vh;
 }
+.days_36_image2{
+	width: 100%;
+	padding-top: 5.5vh;
+	padding-bottom:0vh;
+}
+
 .days_36_content{
 	width: 50%;
 	margin: auto;
-	padding-top: 7.5vh;
-	padding-bottom:7.5vh;
+	padding-top: 2vh;
+	padding-bottom:2vh;
 }
 /*******************************************************************
                             Token
@@ -42,6 +50,13 @@
 	padding-top: 2vh;
 	padding-bottom:2vh;
 }
+.token_content_head{
+	width: 50%;
+	margin: auto;
+	font-family: HKGrotesk_Bold;
+	padding-top: 4vh;
+	padding-bottom:2vh;
+}
 .token_colors_img{
 	width: 30vw;
 	padding-bottom: 2vh;
@@ -49,7 +64,7 @@
 .token_type_img{
 	width: 50vw;
 	padding-top: 2vh;
-	padding-bottom: 2vh;
+	padding-bottom: 0vh;
 }
 .big_img{
 	width: 100%;
@@ -70,6 +85,13 @@
 	margin: auto;
 	padding-top: 2vh;
 	padding-bottom:2vh;
+}
+.typo_poster_content_head{
+	width: 50%;
+	margin: auto;
+	padding-top: 4vh;
+	padding-bottom:2vh;
+	font-family: HKGrotesk_Bold; 
 }
 .typo_poster_colors_img{
 	width: 15vw;
@@ -95,6 +117,13 @@
 	padding-top: 2vh;
 	padding-bottom:2vh;
 }
+.culturals_website_content_head{
+	width: 50%;
+	margin: auto;
+	padding-top: 4vh;
+	padding-bottom:2vh;
+	font-family: HKGrotesk_Bold;
+}
 .culturals_website_colors_img{
 	width: 15vw;
 	padding-bottom: 2vh;
@@ -106,6 +135,9 @@
 }
 .website_flow{
 	width: 100%;
+}
+#website_link{
+	padding-bottom: 10vh;
 }
 
 /*******************************************************************
