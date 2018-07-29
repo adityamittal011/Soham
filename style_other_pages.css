@@ -14,7 +14,7 @@
 /*******************************************************************
                             36 days of Type
 *********************************************************************/
-#days_36{
+.days_36{
 	font-size: 5.2vw;
 	font-family: HKGrotesk_Bold;
 	color: #8083BF;
@@ -31,7 +31,7 @@
 /*******************************************************************
                             Token
 *********************************************************************/
-#token{
+.token{
 	font-size: 5.2vw;
 	font-family: HKGrotesk_Bold;
 	color: #F5A71C;
@@ -60,7 +60,7 @@
 /*******************************************************************
                       4th Poster Typography Page
 *********************************************************************/
-#typo_poster{
+.typo_poster{
 	font-size: 5.2vw;
 	font-family: HKGrotesk_Bold;
 	color: #F3C0C7;
@@ -84,7 +84,7 @@
 /*******************************************************************
                             Culturals Website
 *********************************************************************/
-#culturals_website{
+.culturals_website{
 	font-size: 5.2vw;
 	font-family: HKGrotesk_Bold;
 	color: #E83C68;
@@ -115,7 +115,7 @@
 	.back{
 		width: 6vw;
 	}
-	#days_36,#token,#typo_poster,#culturals_website{
+	.days_36,.token,.typo_poster,.culturals_website{
 		font-size: 8vw;
 	}
 }

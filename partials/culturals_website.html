@@ -1,26 +1,5 @@
 <!-- Navbar -->
-<div id="top_nav" ng-init="act=1">
-    <img src="name_logo.svg" id="name_logo"/>
-    <div class="nav_options" id="lappy_display">
-      <a ng-click="scroll_to('home')" ng-class="{'active_top_nav':act==1}">Home</a>
-      <a ng-click="scroll_to('projects')" ng-class="{'active_top_nav':act==2}">Projects</a>
-      <a ng-click="scroll_to('contact')" ng-class="{'active_top_nav':act==3}">Contact</a>
-    </div>
-</div>
-<!--phone nav bar-->
-<div ng-click="toggle_icon()" id="nav_icon">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-<div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
-  <a ng-click="scroll_to('home'); toggle_icon()" ng-class="{'active_top_nav':act==1}">Home</a>
-  <a ng-click="scroll_to('projects'); toggle_icon()" ng-class="{'active_top_nav':act==2}">Projects</a>
-  <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}">Contact</a>
-</div>
-
-<!-- Navbar -->
-<div id="top_nav" ng-init="act=1">
+<div id="top_nav" ng-init="act=2">
     <img src="name_logo.svg" id="name_logo"/>
     <div class="nav_options" id="lappy_display">
       <a ng-click="switch_page('/')" ng-class="{'active_top_nav':act==1}"><u>Home</u></a>
@@ -36,17 +15,17 @@
 </div>
 <div ng-class="{'nav_options':true,'disappear':disappear}" ng-init="disappear=true" id="phone_display nav_options">
   <a ng-click="switch_page('/')" ng-class="{'active_top_nav':act==1}"><u>Home</u></a>
-  <a ng-click="switch_page_hash('/','projects')"><u>Projects</u></a>
+  <a ng-click="switch_page_hash('/','projects')" ng-class="{'active_top_nav':act==2}"><u>Projects</u></a>
   <a ng-click="scroll_to('contact'); toggle_icon()" ng-class="{'active_top_nav':act==3}"><u>Contact</u></a>
 </div>
 
 
-
 <!--Main Content-->
-<div class="main_content">
-  <div id="culturals_website"><img src="icons/back.png" ng-click="switch_page_hash('/','pjt_4')" class="back"/>  Culturals Website</div>
+<div  ng-class="{'main_content':true, 'less_opacity':less_opacity}" ng-init="less_opacity=false">
+  <div class="culturals_website" id="lappy_display"><img src="icons/back.png" ng-click="switch_page_hash('/','pjt_4')" class="back"/>  Culturals Website</div>
+  <div class="culturals_website" id="phone_display"><img src="icons/back.png" ng-click="switch_page_hash('/','pjt_4_p')" class="back"/>  Culturals Website</div>
   <div class="culturals_website_content">
-    <div class="italic" style="display:block">Illustration</div>
+    <div class="italic" style="display:block">UI/UX Design</div>
     <img src="images/Culturals.png" class="main_img"/>
   </div>
   <div class="culturals_website_content">
@@ -73,6 +52,9 @@
   </div>
   <img src="images/culturals_website/website_fonts.png" class="culturals_website_type_img"/>
   <img src="images/culturals_website/flow.png" class="website_flow"/>
+  <div class="culturals_website_content">
+    Try the Prototype here: <a href="https://invis.io/46N5W0ISXB2" target="_blank" style="color:red; display:inline">https://invis.io/46N5W0ISXB2</a>
+  </div>
 </div>
 
 
@@ -86,16 +68,17 @@
     <div>
       <div class="contact_desp">I am  an undergraduate student of IIT Bombay, my Major is in Civil Engineering and my minor is in Design.</div>
       <div id="resume">
-        <div>View my Resume</div>
+        View my Resume
+        <img src="icons/front.png" class="resume_arrow"/>
       </div>
     </div>
     <div id="get_in_touch">
       <div class="bold">Get in touch</div>
-      <img src="icons/phone.png" ng-click="copy_number()" class="icon" onmouseover="this.setAttribute('src', 'icons/act_phone.png')"onmouseout="this.setAttribute('src', 'icons/phone.png')"/>
-      <img src="icons/mail.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_mail.png')"onmouseout="this.setAttribute('src', 'icons/mail.png')"/>
-      <img src="icons/fb.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_fb.png')"onmouseout="this.setAttribute('src', 'icons/fb.png')"/>
-      <img src="icons/insta.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_insta.png')"onmouseout="this.setAttribute('src', 'icons/insta.png')"/>
-      <img src="icons/ball.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_ball.png')"onmouseout="this.setAttribute('src', 'icons/ball.png')"/>
+      <img src="icons/phone.png" ng-click="copy_number()" class="icon"/>
+      <img src="icons/mail.png" ng-click="copy_mail()" class="icon"/>
+      <a href="https://www.facebook.com/sohamkhadatare" target="_blank"><img src="icons/fb.png" class="icon"/></a>
+      <a href="https://www.instagram.com/sohamkhadatare/" target="_blank"><img src="icons/insta.png" class="icon"/></a>
+      <a href="https://dribbble.com/sohamkhadatare" target="_blank"><img src="icons/ball.png" class="icon"/></a>
     </div>
     <div>
   </div>

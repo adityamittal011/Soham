@@ -35,14 +35,25 @@ app.controller('HomeCtrl', ['$scope', '$window', '$location',
     ----------------------------*/
         
         angular.element($window).bind('scroll', function () {
-            var projects_y = elmYPosition('projects');
-            var contact_y = elmYPosition('contact');
-            var currentY = currentYPosition();
-            //projects_y is also the height of the screen
-            if(currentY<(projects_y/2)) $scope.act = 1;
-            else if(currentY<(contact_y-(projects_y/2))) $scope.act = 2;
-            else $scope.act = 3;
-            $scope.$apply();
+            if(document.getElementById('home')!=null){ //home page is opened
+               var projects_y = elmYPosition('projects');
+                var contact_y = elmYPosition('contact');
+                var currentY = currentYPosition();
+                //projects_y is also the height of the screen
+                if(currentY<(projects_y/2)) $scope.act = 1;
+                else if(currentY<(contact_y-(projects_y/2))) $scope.act = 2;
+                else $scope.act = 3;
+                $scope.$apply(); 
+            } else{
+                //individual pages are opened.
+                var contact_y = elmYPosition('contact');
+                var end_y = elmYPosition('get_in_touch');//to get an estimate of y of end point
+                var currentY = currentYPosition();
+                if(currentY>(4*contact_y-3*end_y)) $scope.act = 3;
+                else $scope.act = 2;
+                $scope.$apply();
+            }
+            
         });
     /* scrollTo -
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -122,12 +133,21 @@ app.controller('HomeCtrl', ['$scope', '$window', '$location',
         --------------------------------------------------*/
         $scope.copy_number = function(){
             const el = document.createElement('textarea');
-            el.value = "88";
+            el.value = "8655261115";
             document.body.appendChild(el);
             el.select();
             document.execCommand('copy');
             document.body.removeChild(el);
             alert("Phone Number copied to clipboard!")
+        }
+        $scope.copy_mail = function(){
+            const elem = document.createElement('textarea');
+            elem.value = "soham.khadatare@gmail.com";
+            document.body.appendChild(elem);
+            elem.select();
+            document.execCommand('copy');
+            document.body.removeChild(elem);
+            alert("Email ID copied to clipboard!")
         }
         $scope.switch_page = function(path){
             $window.scrollTo(0, 0);

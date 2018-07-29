@@ -41,6 +41,18 @@ a{
 	color:black; 
 }
 /*****************************************/
+/*Loading GIF
+/*****************************************/
+#loading{
+	position: fixed;
+	height: 100%;
+	z-index: 1000;
+	background-color: white;
+}
+#loading-image{
+	width: 100%;
+}
+/*****************************************/
 /*Web Page
 /*****************************************/
 .heading{
@@ -220,16 +232,21 @@ a{
 	display: inline;
 	padding-left: 0.25vw;
 	padding-right: 0.25vw;
+	opacity: 0.24;
 }
 .icon:hover{
 	cursor: pointer;
+	opacity: 1;
 }
 #face{
-	width:20%;
+	width:25%;
 	display:inline-block;
 }
-.contact_desp:after{
-	content: "Lorem ipsum dolor sit amet, causae sadipscing est et, vel tation salutatus vituperata ex. Id mei omnes commodo eruditi, nobis dolor accusam nam te. Ei unum pericula pri.";
+.resume_arrow{
+	width: 1.1vw;
+	opacity: 1;
+	cursor: pointer;
+	display: inline;
 }
 
 /*****************************************************************
@@ -237,7 +254,7 @@ Responsive Website
 *****************************************************************/
 @media all and (max-width: 750px){
 	body{
-		font-size: 2vw;
+		font-size: 3vw;
 	}
 	#phone_display{
 		display: block;
@@ -246,11 +263,14 @@ Responsive Website
 		display: none;
 	}
 	.italic{
-		font-size: 1.5vw; 
+		font-size: 2.2vw; 
 	}
 	/*****************************************/
 	/*Home*/
 	/*****************************************/
+	#home{
+		height: auto;
+	}
 	.heading{
 		font-size: 8vw;
 	}
@@ -310,10 +330,11 @@ Responsive Website
 		transition:0.4s;
 		left: 0vw;
 		top: 0vh;
+		opacity: 1;
 	}
 	.disappear {
-		left: 100vw;
-		top: -50vh;
+		opacity: 0;
+		z-index: -1;
 	}
 	.less_opacity{
 		opacity: 0.05;
@@ -347,10 +368,22 @@ Responsive Website
 	}
 	/*Projects*/
 	
-	#pjt_1, #pjt_2, #pjt_3,#pjt_4{
+	#pjt_1_p, #pjt_2_p, #pjt_3_p,#pjt_4_p{
 		display: block;
 		text-align: center;
 		padding-bottom: 12vh;
+	}
+	#pjt_1_p .pjt_heading{
+		color: #8083BF;
+	}
+	#pjt_2_p .pjt_heading{
+		color: #F5A71C;
+	}
+	#pjt_3_p .pjt_heading{
+		color: #F3C0C7;
+	}
+	#pjt_4_p .pjt_heading{
+		color: #E83C68;
 	}
 
 	.pjt_img{
@@ -398,13 +431,13 @@ Responsive Website
 		height: 2vw;
 	}
 	.pjt_heading{
-		font-size: 4vw;
+		font-size: 6vw;
 		padding-left: 2vw;
 		display: table-cell;
 		vertical-align: middle;
 	}
 
-	#pjt_1 .pjt_content,#pjt_3 .pjt_content, #pjt_2 .pjt_content,#pjt_4 .pjt_content{
+	#pjt_1_p .pjt_content,#pjt_3_p .pjt_content, #pjt_2_p .pjt_content,#pjt_4_p .pjt_content{
 		text-align: center;
 	}
 
@@ -420,18 +453,18 @@ Responsive Website
 		text-align: left;
 	}
 
-	.contact_desp:after{
-	  content: "My name is Soham. Peace, yo!";
-	}
-
 	#get_in_touch{
 		font-size: 3.5vw;
 	}
 	.icon{
 		width: 3vw;
+		opacity: 1;
 	}
 	#face{
 		width: 40%;
+	}
+	.resume_arrow{
+		width: 2.4vw;
 	}
 
 }

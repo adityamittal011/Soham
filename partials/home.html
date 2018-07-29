@@ -98,7 +98,7 @@
   <!--Phone display Projects-->
   <div class="pjts" id="phone_display">
 
-    <div id="pjt_1">
+    <div id="pjt_1_p" ng-click="switch_page('/36_days_of_type')">
       <img src="images/A-01.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">01</div>
@@ -111,7 +111,7 @@
       <div class="pjt_desp">Illstrations for every Alphabet and Number made daily for 36 days</div>
     </div>
 
-    <div id="pjt_2">
+    <div id="pjt_2_p" ng-click="switch_page('/token')">
       <img src="images/Token.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">02</div>
@@ -124,8 +124,8 @@
       <div class="pjt_desp">Mascot Design for Inter IIT Cultural Meet 2017-18</div>
     </div>
 
-    <div id="pjt_3">
-      <img src="images/Poster.png" class="pjt_img">
+    <div id="pjt_3_p" ng-click="switch_page('/4th_poster_typo')">
+      <img src="images/Poster2.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">03</div>
         <div class="line">
@@ -137,7 +137,7 @@
       <div class="pjt_desp">Submission for the 4th Poster Typography Contest conducted by Museum of Typography, Greece</div>
     </div>
 
-    <div id="pjt_4">
+    <div id="pjt_4_p" ng-click="switch_page('/culturals_website')">
       <img src="images/Culturals.png" class="pjt_img">
       <div class="pjt_content">
         <div class="nmbr bold">04</div>
@@ -162,16 +162,17 @@
     <div>
       <div class="contact_desp">I am  an undergraduate student of IIT Bombay, my Major is in Civil Engineering and my minor is in Design.</div>
       <div id="resume">
-        <div>View my Resume</div>
+        View my Resume
+        <img src="icons/front.png" class="resume_arrow"/>
       </div>
     </div>
     <div id="get_in_touch">
       <div class="bold">Get in touch</div>
-      <img src="icons/phone.png" ng-click="copy_number()" class="icon" onmouseover="this.setAttribute('src', 'icons/act_phone.png')"onmouseout="this.setAttribute('src', 'icons/phone.png')"/>
-      <img src="icons/mail.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_mail.png')"onmouseout="this.setAttribute('src', 'icons/mail.png')"/>
-      <img src="icons/fb.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_fb.png')"onmouseout="this.setAttribute('src', 'icons/fb.png')"/>
-      <img src="icons/insta.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_insta.png')"onmouseout="this.setAttribute('src', 'icons/insta.png')"/>
-      <img src="icons/ball.png" class="icon" onmouseover="this.setAttribute('src', 'icons/act_ball.png')"onmouseout="this.setAttribute('src', 'icons/ball.png')"/>
+      <img src="icons/phone.png" ng-click="copy_number()" class="icon"/>
+      <img src="icons/mail.png" ng-click="copy_mail()" class="icon"/>
+      <a href="https://www.facebook.com/sohamkhadatare" target="_blank"><img src="icons/fb.png" class="icon"/></a>
+      <a href="https://www.instagram.com/sohamkhadatare/" target="_blank"><img src="icons/insta.png" class="icon"/></a>
+      <a href="https://dribbble.com/sohamkhadatare" target="_blank"><img src="icons/ball.png" class="icon"/></a>
     </div>
     <div>
   </div>
